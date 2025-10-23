@@ -9,8 +9,8 @@ spec:
   - host: localhost
     http:
       paths:
-      - path: /argocd
-        pathType: Prefix
+      - path: /
+        pathType: ImplementationSpecific
         backend:
           service:
             name: argocd-server
