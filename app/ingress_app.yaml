@@ -1,22 +1,14 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ci-lab-ingress
-  namespace: argocd
+  name: app-ingress
+  namespace: dev
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web  # HTTP uniquement
 spec:
   ingressClassName: traefik
   rules:
-  - host: localhost
-    http:
-      paths:
-      - path: /
-        pathType: ImplementationSpecific
-        backend:
-          service:
-            name: argocd-server
-            port:
-              number: 80
-  - host: localhost
+  - host: local.argo.lab
     http:
       paths:
       - path: /app
