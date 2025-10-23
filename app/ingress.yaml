@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - host: 192.168.56.10
+  - host: 192.168.56.110
     http:
       paths:
       - path: /argocd
@@ -16,7 +16,7 @@ spec:
             name: argocd-server
             port:
               number: 80
-  - host: 192.168.56.10
+  - host: 192.168.56.110
     http:
       paths:
       - path: /app
