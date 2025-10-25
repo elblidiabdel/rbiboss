@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: wil-playground
-        image: wil42/playground:v1  # <-- change ici v1 -> v2 pour tester l’update
+        image: wil42/playground:v2  # <-- change ici v1 -> v2 pour tester l’update
         command: ["./wil_test"]
         ports:
         - containerPort: 8888
