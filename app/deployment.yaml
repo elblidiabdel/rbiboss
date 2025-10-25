@@ -17,6 +17,6 @@ spec:
       containers:
       - name: wil-playground
         image: wil42/playground:v1  # <-- change ici v1 -> v2 pour tester l’update
-        command: ["sh", "-c", "sleep infinity"]
+        command: ["./wil_test"]
         ports:
         - containerPort: 8888
